@@ -1,0 +1,15 @@
+generated: '2026-08-23'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: initialtx.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 27 14:21:03 2026 GMT
+  hsts: false
+domains:
+- domain: initialtx.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false

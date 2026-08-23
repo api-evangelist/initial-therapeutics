@@ -1,7 +1,21 @@
 aid: initial-therapeutics
 name: Initial Therapeutics
-description: 'Initial Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Initial Therapeutics, Inc. is a preclinical-stage biotechnology company in South San
+  Francisco, California, discovering and developing a new class of small-molecule medicines
+  designed to halt pathogenic protein formation in its earliest stages. Its proprietary STOPS
+  platform — Selective Termination of Protein Synthesis — intercepts the translation of a target
+  protein inside the exit tunnel of the ribosome, recognizing the nascent primary linear sequence
+  rather than a fully folded three-dimensional structure, an approach the company positions as
+  starkly differentiated from targeted protein degradation and from interventions that can only
+  act on proteins after they are fully formed. The company launched publicly on May 1, 2023 with
+  a $75 million Series A from Apple Tree Partners, was co-founded with academic scientists Jamie
+  H. D. Cate (UC Berkeley), Brian Paegel (UC Irvine) and Kevan Shokat (UCSF/UC Berkeley), and
+  builds on ribosome biochemistry, proteomics, medicinal chemistry, DNA-encoded library technology
+  and chemical genetics, with early programs aimed at oncology targets long considered undruggable.
+  Initial Therapeutics is a therapeutics discovery company, not a software vendor: it publishes a
+  small marketing website and no public API, SDK, developer portal or machine-readable contract of
+  any kind.
 url: https://raw.githubusercontent.com/api-evangelist/initial-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +26,13 @@ created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
+- Biotechnology
+- Therapeutics
+- Drug Discovery
+- Small Molecules
+- Oncology
+- Life Sciences
+- Preclinical
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,40 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/initial-therapeutics-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://initialtx.com/
+- type: TermsOfService
+  url: https://initialtx.com/terms-of-use.html
+- type: PrivacyPolicy
+  url: https://initialtx.com/privacy-policy.html
+- type: LLMsTxt
+  url: llms/initial-therapeutics-llms.txt
+
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Initial Therapeutics is a preclinical small-molecule drug-discovery company whose entire web
+    presence is a five-page marketing site on shared SiteGround hosting, where every contract path
+    (/openapi.json, /graphql, /llms.txt, /.well-known/*) returns the identical site-wide HTTP 202
+    robot-challenge body that a deliberately bogus path returns, and api./docs./developer.initialtx.com
+    are wildcard DNS onto SiteGround's default vhost (403, certificate CN=gvam1148.siteground.biz) —
+    there is no API here to gate, to read, or to hide.
+  evidence:
+  - url: https://initialtx.com/openapi.json
+    status: 202
+  - url: https://initialtx.com/.well-known/agent-card.json
+    status: 202
+  - url: https://api.initialtx.com/openapi.json
+    status: 403
+  - url: https://pypi.org/pypi/initialtx/json
+    status: 404
+  checked: '2026-08-23'

@@ -1,0 +1,86 @@
+# Initial Therapeutics
+
+> Initial Therapeutics, Inc. is a preclinical-stage biotechnology company in South San Francisco,
+> California. It discovers and develops small-molecule medicines designed to halt pathogenic
+> protein formation at its earliest stage, using a proprietary STOPS platform (Selective
+> Termination of Protein Synthesis) that intercepts translation of a target protein inside the
+> ribosome exit tunnel. It is a drug discovery company, not a software vendor.
+
+<!--
+provenance:
+  generated: 2026-08-23
+  method: generated
+  source: Authored by API Evangelist from apis.yml and this repository's artifacts.
+           NOT published by Initial Therapeutics; the provider serves no llms.txt.
+           https://initialtx.com/llms.txt answered HTTP 202 with a SiteGround robot-challenge
+           interstitial, the same body it returns for any path including nonexistent ones.
+-->
+
+## Does Initial Therapeutics have an API?
+
+No. As of 2026-08-23 Initial Therapeutics publishes no public API, no SDK, no webhooks, no
+developer portal, and no machine-readable contract of any kind — no OpenAPI, Swagger, AsyncAPI,
+GraphQL SDL, Protobuf, WSDL, MCP server or A2A agent card. There is nothing here for an agent or
+an integrator to call. This is an expected result for a preclinical therapeutics company: software
+is not the product.
+
+What was checked on 2026-08-23:
+
+- `https://initialtx.com/` and `https://www.initialtx.com/` — the only web property the company
+  operates. A five-page marketing site (`/science.html`, `/news-and-publications.html`,
+  `/connect.html`, `/terms-of-use.html`, `/privacy-policy.html`) plus PDF press releases
+  under `/pdfs/`.
+- Contract paths on that host — `/openapi.json`, `/openapi.yaml`, `/swagger.json`, `/api-docs`,
+  `/api`, `/graphql` (GET and an introspection POST), `/llms.txt`, `/robots.txt`, `/sitemap.xml`.
+  Every one returned HTTP 202 carrying the SiteGround "Robot Challenge Screen" interstitial
+  (`sg-captcha: challenge`), identical to the body returned for a deliberately bogus path — a
+  site-wide catch-all, not evidence of a document.
+- `/.well-known/` — security.txt, openid-configuration, oauth-authorization-server,
+  oauth-protected-resource, api-catalog, ai-plugin.json, agent-card.json and the legacy
+  agent.json. All returned the same 202 catch-all. See `well-known/`.
+- Candidate API hosts — `api.`, `app.`, `docs.`, `developer.` and `portal.initialtx.com` all
+  resolve to one shared SiteGround address (35.212.3.151) via a wildcard record, present a
+  certificate for `CN=gvam1148.siteground.biz` that does not match the hostname, and answer
+  `403 | Access blocked` with `x-default-vhost: 1`. They are shared-hosting defaults, not
+  company API endpoints, and must not be recorded as an API surface.
+- Package registries — npm, PyPI. No first-party client library under `initialtx` or
+  `initial-therapeutics`.
+- GitHub — no organization for this company.
+
+## Company
+
+- Legal name: Initial Therapeutics, Inc.
+- Headquarters: South San Francisco, California, USA
+- Public launch: 2023-05-01, with a $75M Series A from Apple Tree Partners
+- Scientific co-founders: Jamie H. D. Cate, Ph.D. (UC Berkeley); Brian Paegel, Ph.D. (UC Irvine);
+  Kevan Shokat, Ph.D. (UCSF / UC Berkeley)
+- Founding CEO: Spiros Liras, Ph.D. (ATP venture partner); Peter DiLaura later named CEO
+- Platform: STOPS — Selective Termination of Protein Synthesis
+- Focus: oncology and other targets considered undruggable by conventional structure-based methods
+- Employees: 11-50 (LinkedIn, 2026)
+
+## Links
+
+- [Website](https://initialtx.com/)
+- [Science](https://initialtx.com/science.html)
+- [News and Publications](https://initialtx.com/news-and-publications.html)
+- [Contact](https://initialtx.com/connect.html)
+- [Terms of Use](https://initialtx.com/terms-of-use.html)
+- [Privacy Policy](https://initialtx.com/privacy-policy.html)
+- [Launch press release (PDF)](https://initialtx.com/pdfs/Initial-Therapeutics-launch-press-release-5-1-23.pdf)
+
+Note: initialtx.com sits behind a SiteGround robot challenge. A browser reaches every link above;
+an automated fetch receives an HTTP 202 interstitial instead. That is an edge policy, not a dead
+page.
+
+## Artifacts in this profile
+
+- [Domain security probe](security/initial-therapeutics-domain-security.yml) — TLS 1.3, valid
+  certificate, no HSTS, no DNSSEC, no CAA, SPF present, no DMARC.
+- [.well-known probe](well-known/initial-therapeutics-well-known.yml) — recorded absence.
+
+## About this profile
+
+This is an independent third-party profile maintained by API Evangelist from publicly reachable
+material. It is not operated or endorsed by Initial Therapeutics. Corrections, re-scores and
+removal are free: https://apievangelist.com or info@apievangelist.com

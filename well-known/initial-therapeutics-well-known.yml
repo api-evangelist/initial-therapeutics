@@ -1,0 +1,58 @@
+generated: '2026-08-23'
+method: probed
+source: >-
+  Live probes of https://initialtx.com/.well-known/* on 2026-08-23. Initial Therapeutics
+  operates a single marketing host; no API host exists to probe. Every path answered HTTP 202
+  with the SiteGround "Robot Challenge Screen" interstitial (sg-captcha: challenge,
+  content-type text/html, meta-refresh to /.well-known/sgcaptcha/) rather than a document —
+  the same body is returned for a deliberately bogus path, so this is an origin-wide catch-all,
+  NOT a served .well-known document. No WellKnown, SecurityTxt or AgentCard pointer is emitted:
+  this file records an absence, and an absence must not be wired as a presence.
+note: >-
+  A 202 challenge is not a 404 and is not a document. Nothing here should be read as the
+  provider serving a .well-known surface; nothing here should be read as the provider having
+  removed one either. Re-probe if the origin challenge is ever lifted.
+hosts:
+- host: initialtx.com
+  role: website
+  challenge: siteground-sgcaptcha
+  documents:
+  - path: /.well-known/security.txt
+    status: 202
+    file: null
+    result: bot-challenge-html
+  - path: /.well-known/openid-configuration
+    status: 202
+    file: null
+    result: bot-challenge-html
+  - path: /.well-known/oauth-authorization-server
+    status: 202
+    file: null
+    result: bot-challenge-html
+  - path: /.well-known/oauth-protected-resource
+    status: 202
+    file: null
+    result: bot-challenge-html
+  - path: /.well-known/api-catalog
+    status: 202
+    file: null
+    result: bot-challenge-html
+  - path: /.well-known/ai-plugin.json
+    status: 202
+    file: null
+    result: bot-challenge-html
+  - path: /.well-known/agent-card.json
+    status: 202
+    file: null
+    result: bot-challenge-html
+  - path: /.well-known/agent.json
+    status: 202
+    file: null
+    result: bot-challenge-html
+control:
+  path: /zzz-nonexistent-xyz
+  status: 202
+  result: bot-challenge-html
+  note: >-
+    Control probe of a path that cannot exist returns the identical body, proving the 202s above
+    are a catch-all interstitial and carry no information about what the origin serves.
