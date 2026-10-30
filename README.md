@@ -64,5 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Initial Therapeutics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Initial Therapeutics, Inc. is a preclinical-stage biotechnology company in South San Francisco, California, discovering and developing a new class of small-molecule medicines designed to halt pathogenic protein formation in its earliest stages. Its proprietary STOPS platform — Selective Termination of Protein Synthesis — intercepts the translation of a target protein inside the exit tunnel of the ribosome, recognizing the nascent primary linear sequence rather than a fully folded three-dimensional structure, an approach the company positions as starkly differentiated from targeted protein degradation and from interventions that can only act on proteins after they are fully formed. The company launched publicly on May 1, 2023 with a $75 million Series A from Apple Tree Partners, was co-founded with academic scientists Jamie H. D. Cate (UC Berkeley), Brian Paegel (UC Irvine) and Kevan Shokat (UCSF/UC Berkeley), and builds on ribosome biochemistry, proteomics, medicinal chemistry, DNA-encoded library technology and chemical genetics, with early programs aimed at oncology targets long considered undruggable. Initial Therapeutics is a therapeutics discovery company, not a software vendor: it publishes a small marketing website and no public API, SDK, developer portal or machine-readable contract of any kind.
+
+**Areas:** Company · Biotechnology · Therapeutics · Drug Discovery · Small Molecule · Oncology · Life Sciences · Preclinical
+
+## Initial Therapeutics on APIs.io
+
+Everything profiled for Initial Therapeutics is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/initial-therapeutics/](https://apis.io/providers/initial-therapeutics/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Initial Therapeutics Domain Security](https://apis.io/security/initial-therapeutics/initial-therapeutics-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://initialtx.com/)
+- [Terms of service](https://initialtx.com/terms-of-use.html)
+- [Privacy policy](https://initialtx.com/privacy-policy.html)
+
+## API Evangelist rating
+
+**Kin Score 4.1** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 51.8 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/initial-therapeutics/](https://apis.io/providers/initial-therapeutics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Initial Therapeutics: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/initial-therapeutics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
